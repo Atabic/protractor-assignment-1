@@ -1,0 +1,22 @@
+{
+  "name": "protractor-assignmet-1",
+  "version": "1.0.0",
+  "description": "Protractor test application",
+  "main": "index.js",
+  "scripts": {
+    "debug": "node --inspect-brk ./nod_modules/.bin/protractor conf.js",
+    "pretest": "npm run tsc && npm run webdriver-update",
+    "test": "protractor conf.js",
+    "tsc":"tsc",
+    "webdriver-update" : "webdriver-manager update --standalone=fasle --gecko=false"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/mocha": "^9.1.1",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "protractor": "^7.0.0",
+    "ts-node": "^10.8.2"
+  }
+}

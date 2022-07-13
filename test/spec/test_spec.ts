@@ -6,7 +6,7 @@ chai.use(chaiAsPromised)
 const expect = chai.expect;
 const done = chai.done;
 
-describe('test', () => {
+describe('Flights and Its form', () => {
     var page: TestPage;
     beforeEach(() => {
         page = new TestPage()
@@ -41,5 +41,9 @@ describe('test', () => {
         expect(result).to.equal('Round-trip');
         const allElements = await page.checkVisibleFields();
         expect(allElements).to.equal(null);
+    })
+    it('Click adult multiple times', async () => {
+        const result = await page.clickElementMultipleTimes();
+        expect(result).to.equal('Searches cannot have more than 9 adults')
     })
 })
